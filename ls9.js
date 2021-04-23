@@ -1,62 +1,54 @@
 
-function dayByday(weekdays){
+function dayByday(){
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
-            if(weekdays){
                 console.log('wake up -go to the work')
                 resolve(10000);
-            }else {
                 reject('drink coffee')
-            }
         },1000)
 })
 }
 function morningProcedures(){
     return new Promise((resolve, reject) =>{
         setTimeout(()=>{
-            if (Math.random() > .5){
-                console.log('you have time')
-                resolve(100)
-            }else {
+           if (Math.random() > .5) {
+               console.log('you have time')
+               resolve(100)
+           }
                 reject('you are late')
-            }
-        },1000)
-    },)
+
+        }, 1000)
+    })
 }
-function breakFast(eatDone){
+function breakFast(){
     console.log('Time for breakfast');
     return new Promise((resolve, reject) =>{
         setTimeout(()=>{
-            if (eatDone){
                 console.log('breakfast is done')
                 resolve( 1500)
-            }else{
                 reject('job is not done')
-            }
+
         },1000)
     })
 }
-function goWork(isjobDone){
+function goWork(){
     return new Promise((resolve,reject )=>{
         setTimeout(()=>{
-            if (isjobDone){
                 console.log('job is done')
                 resolve(500)
-            }else{
                 reject('job is not done')
-            }
         },1000)
     })
 }
 function buyBread(money){
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
-            if(money > 200){
+            if(money > 200) {
                 console.log('buy bread')
-                resolve(money -200)
-            }else {
-                reject('no money go to home')
+                resolve(money - 200)
             }
+                reject('no money go to home')
+
 
         },500)})
 }
@@ -66,9 +58,8 @@ function clearHouse(clearH){
             if(clearH > 200){
                 console.log('plus in karma')
                 resolve(clearH +20)
-            }else {
-                reject('karma is bad')
             }
+                reject('karma is bad')
 
         },1500)
 
@@ -80,9 +71,8 @@ function goTotraine(energy){
             if (energy +200){
                 console.log('workout')
                 resolve(energy>=200)
-            }else {
-                reject('i am tired')
             }
+                reject('i am tired')
 
         },1000)
     })
@@ -95,9 +85,9 @@ function fridayDrinkBeer(beer){
             if(money< priceofBeer){
                 console.log('drink beer');
                 resolve( beer -1000)
-            }else{
-                reject('dont money go home')
             }
+                reject('dont money go home')
+
         },1500)
     })
 }
@@ -108,9 +98,9 @@ function goToHome(road){
            if (moneyonBeer > -500) {
                console.log('go home')
                resolve(road -100)
-           }else{
-               reject('non stop ')
            }
+               reject('non stop ')
+
         },1000)
     })
 
